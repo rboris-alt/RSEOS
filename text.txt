@@ -1,0 +1,37 @@
+github.com/rboris-alt/RSEOS
+
+--- Klasa BankAccount ---
+Atributi:
+	private int accNumber;
+	private double balance;
+Metode:
+	Konstruktori (prazan; sa int parametrom; sa oba parametra)
+	Getteri i setteri za atribute
+	void deposit (double amount) - na balance dodaje amount
+	void withdraw (double amount) - sa balance skida amount, ukoliko je to moguce
+	@Override metoda za toString() - vraca string npr. "Account number: 1202, Balance: 4560.00 eur"
+
+--- Klasa Bank ---
+Atributi:
+	private ArrayList<BankAccount> accounts;
+Metode:
+	Prazan konstruktor (samo inicijalizovati ArrayList)
+	void addAccount (BankAccount acc) - dodaje novi acc na listu
+	void removeAccount (int accNum) - uklanja sa liste account sa accNumber jednakim accNum
+	double getTotalBalance() - sabira balance svih account-a i vraca dobijenu vrednost
+	void printBank() - ispisuje sve BankAccount-e sa liste (pozvati njihove toString() metode)
+
+--- Klasa BankDemo ---
+Glavna klasa, sa main() metodom
+U main() metodi:
+	1. Napraviti banku
+	2. Napraviti 2-3 BankAccount objekta
+	3. Dodati kreirane BankAccount objekte u banku
+	4. Pozvati printBank()
+	5. Pozvati deposit() i withdraw() metode nad kreiranim BankAccount objektima
+	6. Ispisati vrednost koju vraca getTotalBalance() za banku
+	7. Ukloniti jedan nalog
+	8. Ispisati ponovo vrednost od getTotalBalance()
+	9. Pozvati printBank()
+
+
